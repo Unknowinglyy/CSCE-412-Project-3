@@ -1,0 +1,25 @@
+\doxysection{request.\+h}
+\hypertarget{request_8h_source}{}\label{request_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REQUEST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REQUEST\_H}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classrequest}{request}}\{}
+\DoxyCodeLine{00006\ \ \ \ \ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00007\ \ \ \ \ \mbox{\hyperlink{classrequest}{request}}();}
+\DoxyCodeLine{00008\ \ \ \ \ std::string\ getIPIn();}
+\DoxyCodeLine{00009\ \ \ \ \ std::string\ getIPOut();}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{int}\ getProcessTime();}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ ipIn\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ ipOut\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{int}\ processTime\ =\ 0;}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{void}\ randomIP(std::string\ \&ip);\ \ \ \ }
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
