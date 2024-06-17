@@ -1,5 +1,10 @@
 Enter the number of servers: 10
 Enter the time you want to simulate: 10000
+
+Starting queue size: 1000
+Ending queue size: 0
+Range for request processing time: 1-5 milliseconds
+
 Server added.
 Processing request...
 Input IP: 46.105.188.61
