@@ -22,11 +22,11 @@ int main() {
     int servers;
     int simulateTime;
 
-    cout << "Enter the number of servers: 10";
+    cout << "Enter the number of servers: ";
     cin >> servers;
     cout  << endl;
 
-    cout << "Enter the time you want to simulate: 10000";
+    cout << "Enter the time you want to simulate: ";
     cin >> simulateTime;
     cout << endl;
     //start the timer
