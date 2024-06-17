@@ -111,17 +111,14 @@ $(function(){initNavTree('classloadbalancer.html',''); initResizable(true); });
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7d13e7ef044c1d9b7ae3f422f21a0d00" id="r_a7d13e7ef044c1d9b7ae3f422f21a0d00"><td class="memItemLeft" align="right" valign="top"><a id="a7d13e7ef044c1d9b7ae3f422f21a0d00" name="a7d13e7ef044c1d9b7ae3f422f21a0d00"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>distributeRequests</b> ()</td></tr>
-<tr class="memdesc:a7d13e7ef044c1d9b7ae3f422f21a0d00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distributes requests to the web servers when they are first created. <br /></td></tr>
+<tr class="memitem:a7d13e7ef044c1d9b7ae3f422f21a0d00" id="r_a7d13e7ef044c1d9b7ae3f422f21a0d00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d13e7ef044c1d9b7ae3f422f21a0d00">distributeRequests</a> ()</td></tr>
+<tr class="memdesc:a7d13e7ef044c1d9b7ae3f422f21a0d00"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distributes requests to the web servers when they are first created.  <br /></td></tr>
 <tr class="separator:a7d13e7ef044c1d9b7ae3f422f21a0d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9ad3178c7d28630e6369e80e63dab335" id="r_a9ad3178c7d28630e6369e80e63dab335"><td class="memItemLeft" align="right" valign="top"><a id="a9ad3178c7d28630e6369e80e63dab335" name="a9ad3178c7d28630e6369e80e63dab335"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>checkAndRemove</b> ()</td></tr>
-<tr class="memdesc:a9ad3178c7d28630e6369e80e63dab335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for any empty servers and removes them. <br /></td></tr>
+<tr class="memitem:a9ad3178c7d28630e6369e80e63dab335" id="r_a9ad3178c7d28630e6369e80e63dab335"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ad3178c7d28630e6369e80e63dab335">checkAndRemove</a> ()</td></tr>
+<tr class="memdesc:a9ad3178c7d28630e6369e80e63dab335"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks for any empty servers and removes them.  <br /></td></tr>
 <tr class="separator:a9ad3178c7d28630e6369e80e63dab335"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a567e0b15948e0b6922e9893286efdd09" id="r_a567e0b15948e0b6922e9893286efdd09"><td class="memItemLeft" align="right" valign="top"><a id="a567e0b15948e0b6922e9893286efdd09" name="a567e0b15948e0b6922e9893286efdd09"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>checkAndAdd</b> ()</td></tr>
-<tr class="memdesc:a567e0b15948e0b6922e9893286efdd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if all servers are full and adds a new server if they are. <br /></td></tr>
+<tr class="memitem:a567e0b15948e0b6922e9893286efdd09" id="r_a567e0b15948e0b6922e9893286efdd09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a567e0b15948e0b6922e9893286efdd09">checkAndAdd</a> ()</td></tr>
+<tr class="memdesc:a567e0b15948e0b6922e9893286efdd09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if all servers are full and adds a new server if they are.  <br /></td></tr>
 <tr class="separator:a567e0b15948e0b6922e9893286efdd09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a339be5ad68f2cb660d9d4f51752aae49" id="r_a339be5ad68f2cb660d9d4f51752aae49"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a339be5ad68f2cb660d9d4f51752aae49">loadbalancer</a> (std::vector&lt; <a class="el" href="classwebserver.html">webserver</a> * &gt; &amp;servers, std::queue&lt; <a class="el" href="classrequest.html">request</a> &gt; &amp;q)</td></tr>
 <tr class="memdesc:a339be5ad68f2cb660d9d4f51752aae49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor for the load balancer.  <br /></td></tr>
@@ -133,6 +130,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>checkAndAdd</b> ()</t
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing a load balancer. </p>
 <p>This class is responsible for distributing requests to web servers, checking for any empty servers and removing them, and checking if all servers are full and adding a new server if they are. </p>
+
+<p class="definition">Definition at line <a class="el" href="loadbalancer_8h_source.html#l00019">19</a> of file <a class="el" href="loadbalancer_8h_source.html">loadbalancer.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a339be5ad68f2cb660d9d4f51752aae49" name="a339be5ad68f2cb660d9d4f51752aae49"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a339be5ad68f2cb660d9d4f51752aae49">&#9670;&#160;</a></span>loadbalancer()</h2>
@@ -162,6 +161,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>checkAndAdd</b> ()</t
   </dd>
 </dl>
 
+<p class="definition">Definition at line <a class="el" href="loadbalancer_8cpp_source.html#l00015">15</a> of file <a class="el" href="loadbalancer_8cpp_source.html">loadbalancer.cpp</a>.</p>
+
 </div>
 </div>
 <a id="a4fdd244d8ace19a37ddab9a4ea4c14e2" name="a4fdd244d8ace19a37ddab9a4ea4c14e2"></a>
@@ -190,11 +191,80 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>checkAndAdd</b> ()</t
 <p>Destructor for the load balancer. </p>
 <p>Deletes all webserver objects pointed to by the pointers in the webServers vector. </p>
 
+<p class="definition">Definition at line <a class="el" href="loadbalancer_8h_source.html#l00048">48</a> of file <a class="el" href="loadbalancer_8h_source.html">loadbalancer.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a567e0b15948e0b6922e9893286efdd09" name="a567e0b15948e0b6922e9893286efdd09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a567e0b15948e0b6922e9893286efdd09">&#9670;&#160;</a></span>checkAndAdd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadbalancer::checkAndAdd </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks if all servers are full and adds a new server if they are. </p>
+<p>This function iterates through all the servers in the webServers vector. If it finds a server that is not full (i.e., its queue size is less than 50), it sets the 'full' flag to false and breaks out of the loop. If it doesn't find any such server, the 'full' flag remains true, and a new server is added to the webServers vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="loadbalancer_8cpp_source.html#l00062">62</a> of file <a class="el" href="loadbalancer_8cpp_source.html">loadbalancer.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a9ad3178c7d28630e6369e80e63dab335" name="a9ad3178c7d28630e6369e80e63dab335"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad3178c7d28630e6369e80e63dab335">&#9670;&#160;</a></span>checkAndRemove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadbalancer::checkAndRemove </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Checks for any empty servers and removes them. </p>
+<p>Checks for any empty servers and removes them. Does this through the use of an iterator. If any server is found to be empty, it is deleted and removed from the vector. The function continues this check for all servers in the vector. </p>
+
+<p class="definition">Definition at line <a class="el" href="loadbalancer_8cpp_source.html#l00039">39</a> of file <a class="el" href="loadbalancer_8cpp_source.html">loadbalancer.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7d13e7ef044c1d9b7ae3f422f21a0d00" name="a7d13e7ef044c1d9b7ae3f422f21a0d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d13e7ef044c1d9b7ae3f422f21a0d00">&#9670;&#160;</a></span>distributeRequests()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void loadbalancer::distributeRequests </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Distributes requests to the web servers when they are first created. </p>
+<p>Distributes requests to the web servers when they are first created. Only lets 50 requests into each server. Also makes sure that the request queue is not empty before distributing requests. </p>
+
+<p class="definition">Definition at line <a class="el" href="loadbalancer_8cpp_source.html#l00023">23</a> of file <a class="el" href="loadbalancer_8cpp_source.html">loadbalancer.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="loadbalancer_8h_source.html">loadbalancer.h</a></li>
-<li><b>loadbalancer.cpp</b></li>
+<li><a class="el" href="loadbalancer_8cpp_source.html">loadbalancer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

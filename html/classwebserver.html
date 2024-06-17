@@ -124,6 +124,8 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class representing a web server. </p>
 <p>This class is responsible for processing and loading requests, and getting the size of the personal queue of requests. </p>
+
+<p class="definition">Definition at line <a class="el" href="webserver_8h_source.html#l00017">17</a> of file <a class="el" href="webserver_8h_source.html">webserver.h</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8866c90b1cd880ed233b32792d3a4ce5" name="a8866c90b1cd880ed233b32792d3a4ce5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8866c90b1cd880ed233b32792d3a4ce5">&#9670;&#160;</a></span>getQueueSize()</h2>
@@ -151,6 +153,8 @@ Public Member Functions</h2></td></tr>
 <p>Getter for the queue size. </p>
 <dl class="section return"><dt>Returns</dt><dd>The size of the personal queue. </dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="webserver_8h_source.html#l00036">36</a> of file <a class="el" href="webserver_8h_source.html">webserver.h</a>.</p>
+
 </div>
 </div>
 <a id="ac414573c759f82742f9643c3c5b309f5" name="ac414573c759f82742f9643c3c5b309f5"></a>
@@ -171,10 +175,14 @@ Public Member Functions</h2></td></tr>
 <p>Loads a request into the web server's personal queue. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">r</td><td>The request to be loaded. </td></tr>
+    <tr><td class="paramname">r</td><td>The request to be loaded.</td></tr>
+    <tr><td class="paramname">r</td><td>The request to be loaded.</td></tr>
   </table>
   </dd>
 </dl>
+<p>This function adds a request to the web server's personal queue. </p>
+
+<p class="definition">Definition at line <a class="el" href="webserver_8cpp_source.html#l00040">40</a> of file <a class="el" href="webserver_8cpp_source.html">webserver.cpp</a>.</p>
 
 </div>
 </div>
@@ -194,13 +202,16 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Processes a request from the web server's personal queue. </p>
-<p>This function pops the request from the queue and simulates processing time. </p>
+<p>This function pops the request from the queue and simulates processing time.</p>
+<p>This function pops the request from the queue, prints the input and output IP addresses, simulates processing time by sleeping for a duration equal to the processing time of the request (in miliseconds), and then prints a message indicating that the request has been processed and the time it took. </p>
+
+<p class="definition">Definition at line <a class="el" href="webserver_8cpp_source.html#l00015">15</a> of file <a class="el" href="webserver_8cpp_source.html">webserver.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="webserver_8h_source.html">webserver.h</a></li>
-<li><b>webserver.cpp</b></li>
+<li><a class="el" href="webserver_8cpp_source.html">webserver.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->

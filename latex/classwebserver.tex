@@ -25,6 +25,10 @@ Class representing a web server.
 
 This class is responsible for processing and loading requests, and getting the size of the personal queue of requests. 
 
+Definition at line \mbox{\hyperlink{webserver_8h_source_l00017}{17}} of file \mbox{\hyperlink{webserver_8h_source}{webserver.\+h}}.
+
+
+
 \doxysubsection{Member Function Documentation}
 \Hypertarget{classwebserver_a8866c90b1cd880ed233b32792d3a4ce5}\index{webserver@{webserver}!getQueueSize@{getQueueSize}}
 \index{getQueueSize@{getQueueSize}!webserver@{webserver}}
@@ -39,6 +43,10 @@ Getter for the queue size.
 \begin{DoxyReturn}{Returns}
 The size of the personal queue. 
 \end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{webserver_8h_source_l00036}{36}} of file \mbox{\hyperlink{webserver_8h_source}{webserver.\+h}}.
+
 \Hypertarget{classwebserver_ac414573c759f82742f9643c3c5b309f5}\index{webserver@{webserver}!loadRequest@{loadRequest}}
 \index{loadRequest@{loadRequest}!webserver@{webserver}}
 \doxysubsubsection{\texorpdfstring{loadRequest()}{loadRequest()}}
@@ -51,9 +59,15 @@ Loads a request into the web server\textquotesingle{}s personal queue.
 
 
 \begin{DoxyParams}{Parameters}
-{\em r} & The request to be loaded. \\
+{\em r} & The request to be loaded.\\
+\hline
+{\em r} & The request to be loaded.\\
 \hline
 \end{DoxyParams}
+This function adds a request to the web server\textquotesingle{}s personal queue. 
+
+Definition at line \mbox{\hyperlink{webserver_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{webserver_8cpp_source}{webserver.\+cpp}}.
+
 \Hypertarget{classwebserver_ad35041a6c56860d376518f6b9e267078}\index{webserver@{webserver}!processRequest@{processRequest}}
 \index{processRequest@{processRequest}!webserver@{webserver}}
 \doxysubsubsection{\texorpdfstring{processRequest()}{processRequest()}}
@@ -64,9 +78,15 @@ void webserver\+::process\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCa
 
 Processes a request from the web server\textquotesingle{}s personal queue. 
 
-This function pops the request from the queue and simulates processing time. 
+This function pops the request from the queue and simulates processing time.
+
+This function pops the request from the queue, prints the input and output IP addresses, simulates processing time by sleeping for a duration equal to the processing time of the request (in miliseconds), and then prints a message indicating that the request has been processed and the time it took. 
+
+Definition at line \mbox{\hyperlink{webserver_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{webserver_8cpp_source}{webserver.\+cpp}}.
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{webserver_8h}{webserver.\+h}}\item 
-webserver.\+cpp\end{DoxyCompactItemize}
+\mbox{\hyperlink{webserver_8cpp}{webserver.\+cpp}}\end{DoxyCompactItemize}

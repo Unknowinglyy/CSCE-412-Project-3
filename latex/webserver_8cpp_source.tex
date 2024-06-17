@@ -1,0 +1,34 @@
+\doxysection{webserver.\+cpp}
+\hypertarget{webserver_8cpp_source}{}\label{webserver_8cpp_source}\mbox{\hyperlink{webserver_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{webserver_8h}{webserver.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00015}\mbox{\hyperlink{classwebserver_ad35041a6c56860d376518f6b9e267078}{00015}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classwebserver_ad35041a6c56860d376518f6b9e267078}{webserver::processRequest}}()\{}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{if}(!personalQueue.empty())\{}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Processing\ request..."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Input\ IP:\ "{}}\ <<\ personalQueue.front().getIPIn()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Output\ IP:\ "{}}\ <<\ personalQueue.front().getIPOut()\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//get\ the\ process\ time}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ time\ =\ personalQueue.front().getProcessTime();}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \textcolor{comment}{//simulate\ the\ process\ time\ by\ sleeping\ for\ time\ milliseconds}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(time));}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{comment}{//pop\ the\ request\ from\ the\ queue}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ personalQueue.pop();}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Request\ processed."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Request\ took\ "{}}\ <<\ time\ <<\ \textcolor{stringliteral}{"{}\ milliseconds."{}}\ <<\ std::endl\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}No\ requests\ to\ process\ for\ this\ server."{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00031}00031\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00040}\mbox{\hyperlink{classwebserver_ac414573c759f82742f9643c3c5b309f5}{00040}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classwebserver_ac414573c759f82742f9643c3c5b309f5}{webserver::loadRequest}}(\mbox{\hyperlink{classrequest}{request}}\ r)\{}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//load\ the\ request\ into\ the\ queue}}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00042}00042\ \ \ \ \ personalQueue.push(r);}
+\DoxyCodeLine{\Hypertarget{webserver_8cpp_source_l00043}00043\ \}}
+
+\end{DoxyCode}

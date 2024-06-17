@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7eloadbalancer_0',['~loadbalancer',['../classloadbalancer.html#a4fdd244d8ace19a37ddab9a4ea4c14e2',1,'loadbalancer']]]
+  ['request_0',['request',['../classrequest.html#ae49e0b00a54017889a18e955b88087f6',1,'request']]]
 ];

@@ -1,0 +1,43 @@
+\doxysection{request.\+cpp}
+\hypertarget{request_8cpp_source}{}\label{request_8cpp_source}\mbox{\hyperlink{request_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{request_8h}{request.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <ctime>}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00016}\mbox{\hyperlink{classrequest_a79df50e89a7d9ce0f76fc57928007a33}{00016}}\ std::string\ \mbox{\hyperlink{classrequest_a79df50e89a7d9ce0f76fc57928007a33}{request::getIPIn}}()\{}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ ipIn;\ \textcolor{comment}{//gets\ the\ input\ IP}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00024}\mbox{\hyperlink{classrequest_a923e84a1632f9119aa614271c7804e8b}{00024}}\ std::string\ \mbox{\hyperlink{classrequest_a923e84a1632f9119aa614271c7804e8b}{request::getIPOut}}()\{}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{return}\ ipOut;\ \textcolor{comment}{//gets\ the\ output\ IP}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00026}00026\ \}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00032}\mbox{\hyperlink{classrequest_a90c5f2c3de22e2737340e5483bff2a7d}{00032}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classrequest_a90c5f2c3de22e2737340e5483bff2a7d}{request::getProcessTime}}()\{}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{return}\ processTime;\ \textcolor{comment}{//gets\ the\ process\ time}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00041}\mbox{\hyperlink{classrequest_ae49e0b00a54017889a18e955b88087f6}{00041}}\ \mbox{\hyperlink{classrequest_ae49e0b00a54017889a18e955b88087f6}{request::request}}()\{}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//generate\ random\ ipIn}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00043}00043\ \ \ \ \ randomIP(ipIn);}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00044}00044\ \ \ \ \ \textcolor{comment}{//generate\ random\ ipOut}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00045}00045\ \ \ \ \ randomIP(ipOut);}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{comment}{//generate\ random\ time\ between\ 1\ and\ 5}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00047}00047\ \ \ \ \ processTime\ =\ rand()\ \%\ 5\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00048}00048\ \}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00056}00056\ \textcolor{keywordtype}{void}\ request::randomIP(std::string\ \&ip)\{}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//generate\ random\ ip}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00058}00058\ \ \ \ \ ip\ =\ \textcolor{stringliteral}{"{}"{}};\ \textcolor{comment}{//clearing\ the\ ip}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 4;\ i++)\{}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ ip\ +=\ std::to\_string(rand()\ \%\ 256);}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(i\ <\ 3)\{}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ ip\ +=\ \textcolor{stringliteral}{"{}."{}};}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{request_8cpp_source_l00065}00065\ \}}
+
+\end{DoxyCode}
