@@ -16,7 +16,6 @@ int request::getProcessTime(){
 }
 
 request::request(){
-    srand(time(0)); //seed random number generator
     //generate random ipIn
     randomIP(ipIn);
     //generate random ipOut

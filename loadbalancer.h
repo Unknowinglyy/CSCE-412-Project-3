@@ -3,14 +3,16 @@
 #include <vector>
 #include <queue>
 #include "webserver.h"
-
+#include <iostream>
 class loadbalancer {
     public:
-    void distributeRequests(std::queue<request> q);
+    void distributeRequests();
     void checkAndRemove();
-    loadbalancer(std::vector<webserver*> servers, std::queue<request> q);
+    void checkAndAdd();
+    loadbalancer(std::vector<webserver*>& servers, std::queue<request>& q);
     ~loadbalancer(){
         for(auto& server: webServers){
+            std::cout << "Deleting server." << std::endl; 
             delete server;
         }
     }

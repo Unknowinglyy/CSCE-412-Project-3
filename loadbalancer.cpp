@@ -2,33 +2,20 @@
 #include "loadbalancer.h"
 #include "request.h"
 
-loadbalancer::loadbalancer(std::vector<webserver*> servers, std::queue<request> q){
+loadbalancer::loadbalancer(std::vector<webserver*>& servers, std::queue<request>& q){
     webServers = servers;
     requestQueue = q;
 }
 
-void loadbalancer::distributeRequests(std::queue<request> q){
+void loadbalancer::distributeRequests(){
     //load the requests into the web servers
     for(auto& server: webServers){
         //only load requests if the server is not full and there are still requests in the queue
-        while(server->getQueueSize() < 100 && !q.empty()){
+        while(server->getQueueSize() < 50 && !requestQueue.empty()){
             //load the request into the server
-            server->loadRequest(q.front());
+            server->loadRequest(requestQueue.front());
             //pop the request from the overall queue
-            q.pop();
-        }
-    }
-    //if all servers are full and there are still requests in the queue, create a new server
-    if(!q.empty()){
-        webServers.push_back(new webserver());
-        //print a message to the console
-        std::cout << "Server added." << std::endl;
-        //load the requests into the new server
-        while(webServers.back()->getQueueSize() < 100 && !q.empty()){
-            //load the request into the server
-            webServers.back()->loadRequest(q.front());
-            //pop the request from the overall queue
-            q.pop();
+            requestQueue.pop();
         }
     }
 }
@@ -49,4 +36,25 @@ void loadbalancer::checkAndRemove(){
             iterator++;
         }
     }
+}
+
+void loadbalancer::checkAndAdd(){
+    //check if all the servers are full
+    bool full = false;
+    for(auto& server: webServers){
+        if(server->getQueueSize() < 50){
+            full = false;
+            break;
+        }
+        else{
+            full = true;
+        }
+    }
+    if(full){
+        //add a new server
+        webServers.push_back(new webserver());
+        std::cout << "Server added." << std::endl;
+        //distribute requests to the new server
+        distributeRequests();
+    } 
 }

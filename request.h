@@ -12,6 +12,7 @@ class request{
     private:
     std::string ipIn = "";
     std::string ipOut = "";
+
     int processTime = 0;
     void randomIP(std::string &ip);    
 };
