@@ -23,13 +23,11 @@ int main() {
     int simulateTime;
 
     cout << "Enter the number of servers: 10";
-    // cin >> servers;
-    servers = 10;
+    cin >> servers;
     cout  << endl;
 
     cout << "Enter the time you want to simulate: 10000";
-    // cin >> simulateTime;
-    simulateTime = 10000;
+    cin >> simulateTime;
     cout << endl;
     //start the timer
     auto start = std::chrono::high_resolution_clock::now();
