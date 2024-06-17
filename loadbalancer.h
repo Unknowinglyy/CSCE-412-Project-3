@@ -47,9 +47,9 @@ public:
      */
     ~loadbalancer(){
         for(auto& server: webServers){
-            std::cout << "Deleting server." << std::endl; 
             delete server;
         }
+        std::cout << "Deleting load balancer." << std::endl;
     }
 
 private:

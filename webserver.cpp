@@ -27,7 +27,7 @@ void webserver::processRequest(){
         std::cout << "Request took " << time << " milliseconds." << std::endl << std::endl;
     }
     else{
-        std::cout << "No requests to process for this server." << std::endl;
+        return;
     }
 }
 

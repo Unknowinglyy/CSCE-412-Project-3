@@ -60,6 +60,10 @@ void loadbalancer::checkAndRemove(){
  * This function iterates through all the servers in the webServers vector. If it finds a server that is not full (i.e., its queue size is less than 50), it sets the 'full' flag to false and breaks out of the loop. If it doesn't find any such server, the 'full' flag remains true, and a new server is added to the webServers vector.
  */
 void loadbalancer::checkAndAdd(){
+    //no need to add a server if there are no requests
+    if(requestQueue.empty()){
+        return;
+    }
     //check if all the servers are full
     bool full = false;
     for(auto& server: webServers){
