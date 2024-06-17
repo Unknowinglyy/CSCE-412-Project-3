@@ -1,20 +1,88 @@
 \doxysection{request Class Reference}
 \hypertarget{classrequest}{}\label{classrequest}\index{request@{request}}
+
+
+Class representing a request.  
+
+
+
+
+{\ttfamily \#include $<$request.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classrequest_a79df50e89a7d9ce0f76fc57928007a33}\label{classrequest_a79df50e89a7d9ce0f76fc57928007a33} 
-std\+::string {\bfseries get\+IPIn} ()
-\item 
-\Hypertarget{classrequest_a923e84a1632f9119aa614271c7804e8b}\label{classrequest_a923e84a1632f9119aa614271c7804e8b} 
-std\+::string {\bfseries get\+IPOut} ()
-\item 
-\Hypertarget{classrequest_a90c5f2c3de22e2737340e5483bff2a7d}\label{classrequest_a90c5f2c3de22e2737340e5483bff2a7d} 
-int {\bfseries get\+Process\+Time} ()
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{classrequest_ae49e0b00a54017889a18e955b88087f6}{request}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for the request. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classrequest_a79df50e89a7d9ce0f76fc57928007a33}{get\+IPIn}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the input IP address of the request. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classrequest_a923e84a1632f9119aa614271c7804e8b}{get\+IPOut}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the output IP address of the request. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classrequest_a90c5f2c3de22e2737340e5483bff2a7d}{get\+Process\+Time}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the processing time of the request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Class representing a request. 
+
+This class is responsible for storing and providing access to the details of a request, including input and output IP addresses and processing time. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classrequest_ae49e0b00a54017889a18e955b88087f6}\index{request@{request}!request@{request}}
+\index{request@{request}!request@{request}}
+\doxysubsubsection{\texorpdfstring{request()}{request()}}
+{\footnotesize\ttfamily \label{classrequest_ae49e0b00a54017889a18e955b88087f6} 
+request\+::request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the request. 
+
+Initializes a request with random input and output IP addresses and a random processing time. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classrequest_a79df50e89a7d9ce0f76fc57928007a33}\index{request@{request}!getIPIn@{getIPIn}}
+\index{getIPIn@{getIPIn}!request@{request}}
+\doxysubsubsection{\texorpdfstring{getIPIn()}{getIPIn()}}
+{\footnotesize\ttfamily \label{classrequest_a79df50e89a7d9ce0f76fc57928007a33} 
+std\+::string request\+::get\+IPIn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Getter for the input IP address of the request. 
+
+\begin{DoxyReturn}{Returns}
+The input IP address as a string. 
+\end{DoxyReturn}
+\Hypertarget{classrequest_a923e84a1632f9119aa614271c7804e8b}\index{request@{request}!getIPOut@{getIPOut}}
+\index{getIPOut@{getIPOut}!request@{request}}
+\doxysubsubsection{\texorpdfstring{getIPOut()}{getIPOut()}}
+{\footnotesize\ttfamily \label{classrequest_a923e84a1632f9119aa614271c7804e8b} 
+std\+::string request\+::get\+IPOut (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Getter for the output IP address of the request. 
+
+\begin{DoxyReturn}{Returns}
+The output IP address as a string. 
+\end{DoxyReturn}
+\Hypertarget{classrequest_a90c5f2c3de22e2737340e5483bff2a7d}\index{request@{request}!getProcessTime@{getProcessTime}}
+\index{getProcessTime@{getProcessTime}!request@{request}}
+\doxysubsubsection{\texorpdfstring{getProcessTime()}{getProcessTime()}}
+{\footnotesize\ttfamily \label{classrequest_a90c5f2c3de22e2737340e5483bff2a7d} 
+int request\+::get\+Process\+Time (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Getter for the processing time of the request. 
+
+\begin{DoxyReturn}{Returns}
+The processing time as an integer. 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-request.\+h\item 
+\mbox{\hyperlink{request_8h}{request.\+h}}\item 
 request.\+cpp\end{DoxyCompactItemize}

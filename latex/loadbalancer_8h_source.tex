@@ -1,30 +1,36 @@
 \doxysection{loadbalancer.\+h}
-\hypertarget{loadbalancer_8h_source}{}\label{loadbalancer_8h_source}
+\hypertarget{loadbalancer_8h_source}{}\label{loadbalancer_8h_source}\mbox{\hyperlink{loadbalancer_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LOADBALANCER\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LOADBALANCER\_H}}
-\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <queue>}}
-\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}webserver.h"{}}}
-\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classloadbalancer}{loadbalancer}}\ \{}
-\DoxyCodeLine{00008\ \ \ \ \ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keywordtype}{void}\ distributeRequests();}
-\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keywordtype}{void}\ checkAndRemove();}
-\DoxyCodeLine{00011\ \ \ \ \ \textcolor{keywordtype}{void}\ checkAndAdd();}
-\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classloadbalancer}{loadbalancer}}(std::vector<webserver*>\&\ servers,\ std::queue<request>\&\ q);}
-\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classloadbalancer}{\string~loadbalancer}}()\{}
-\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ server:\ webServers)\{}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Deleting\ server."{}}\ <<\ std::endl;\ }
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ server;}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00018\ \ \ \ \ \}}
-\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{private}:}
-\DoxyCodeLine{00020\ \ \ \ \ std::vector<webserver*>\ webServers;}
-\DoxyCodeLine{00021\ \ \ \ \ std::queue<request>\ requestQueue;}
-\DoxyCodeLine{00022\ }
-\DoxyCodeLine{00023\ \};}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#ifndef\ LOADBALANCER\_H}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#define\ LOADBALANCER\_H}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{webserver_8h}{webserver.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classloadbalancer}{loadbalancer}}\ \{}
+\DoxyCodeLine{00020\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloadbalancer_a7d13e7ef044c1d9b7ae3f422f21a0d00}{distributeRequests}}();}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloadbalancer_a9ad3178c7d28630e6369e80e63dab335}{checkAndRemove}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classloadbalancer_a567e0b15948e0b6922e9893286efdd09}{checkAndAdd}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00041\ \ \ \ \ \mbox{\hyperlink{classloadbalancer_a339be5ad68f2cb660d9d4f51752aae49}{loadbalancer}}(std::vector<webserver*>\&\ servers,\ std::queue<request>\&\ q);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00048\ \ \ \ \ \mbox{\hyperlink{classloadbalancer_a4fdd244d8ace19a37ddab9a4ea4c14e2}{\string~loadbalancer}}()\{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keyword}{auto}\&\ server:\ webServers)\{}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Deleting\ server."{}}\ <<\ std::endl;\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ server;}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00059\ \ \ \ \ std::vector<webserver*>\ webServers;}
+\DoxyCodeLine{00064\ \ \ \ \ std::queue<request>\ requestQueue;}
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

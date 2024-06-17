@@ -1,23 +1,68 @@
 \doxysection{loadbalancer Class Reference}
 \hypertarget{classloadbalancer}{}\label{classloadbalancer}\index{loadbalancer@{loadbalancer}}
+
+
+Class representing a load balancer.  
+
+
+
+
+{\ttfamily \#include $<$loadbalancer.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \Hypertarget{classloadbalancer_a7d13e7ef044c1d9b7ae3f422f21a0d00}\label{classloadbalancer_a7d13e7ef044c1d9b7ae3f422f21a0d00} 
 void {\bfseries distribute\+Requests} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Distributes requests to the web servers when they are first created. \end{DoxyCompactList}\item 
 \Hypertarget{classloadbalancer_a9ad3178c7d28630e6369e80e63dab335}\label{classloadbalancer_a9ad3178c7d28630e6369e80e63dab335} 
 void {\bfseries check\+And\+Remove} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Checks for any empty servers and removes them. \end{DoxyCompactList}\item 
 \Hypertarget{classloadbalancer_a567e0b15948e0b6922e9893286efdd09}\label{classloadbalancer_a567e0b15948e0b6922e9893286efdd09} 
 void {\bfseries check\+And\+Add} ()
-\item 
-\Hypertarget{classloadbalancer_a339be5ad68f2cb660d9d4f51752aae49}\label{classloadbalancer_a339be5ad68f2cb660d9d4f51752aae49} 
-{\bfseries loadbalancer} (std\+::vector$<$ \mbox{\hyperlink{classwebserver}{webserver}} \texorpdfstring{$\ast$}{*} $>$ \&servers, std\+::queue$<$ \mbox{\hyperlink{classrequest}{request}} $>$ \&q)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Checks if all servers are full and adds a new server if they are. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classloadbalancer_a339be5ad68f2cb660d9d4f51752aae49}{loadbalancer}} (std\+::vector$<$ \mbox{\hyperlink{classwebserver}{webserver}} \texorpdfstring{$\ast$}{*} $>$ \&servers, std\+::queue$<$ \mbox{\hyperlink{classrequest}{request}} $>$ \&q)
+\begin{DoxyCompactList}\small\item\em Constructor for the load balancer. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classloadbalancer_a4fdd244d8ace19a37ddab9a4ea4c14e2}{\texorpdfstring{$\sim$}{\string~}loadbalancer}} ()
+\begin{DoxyCompactList}\small\item\em Destructor for the load balancer. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Class representing a load balancer. 
+
+This class is responsible for distributing requests to web servers, checking for any empty servers and removing them, and checking if all servers are full and adding a new server if they are. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classloadbalancer_a339be5ad68f2cb660d9d4f51752aae49}\index{loadbalancer@{loadbalancer}!loadbalancer@{loadbalancer}}
+\index{loadbalancer@{loadbalancer}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{loadbalancer()}{loadbalancer()}}
+{\footnotesize\ttfamily \label{classloadbalancer_a339be5ad68f2cb660d9d4f51752aae49} 
+loadbalancer\+::loadbalancer (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classwebserver}{webserver}} \texorpdfstring{$\ast$}{*} $>$ \&}]{servers}{, }\item[{std\+::queue$<$ \mbox{\hyperlink{classrequest}{request}} $>$ \&}]{q}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for the load balancer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em servers} & Vector of pointers to webserver objects. \\
+\hline
+{\em q} & Queue of request objects. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classloadbalancer_a4fdd244d8ace19a37ddab9a4ea4c14e2}\index{loadbalancer@{loadbalancer}!````~loadbalancer@{\texorpdfstring{$\sim$}{\string~}loadbalancer}}
+\index{````~loadbalancer@{\texorpdfstring{$\sim$}{\string~}loadbalancer}!loadbalancer@{loadbalancer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}loadbalancer()}{\string~loadbalancer()}}
+{\footnotesize\ttfamily \label{classloadbalancer_a4fdd244d8ace19a37ddab9a4ea4c14e2} 
+loadbalancer\+::\texorpdfstring{$\sim$}{\string~}loadbalancer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Destructor for the load balancer. 
+
+Deletes all webserver objects pointed to by the pointers in the web\+Servers vector. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-loadbalancer.\+h\item 
+\mbox{\hyperlink{loadbalancer_8h}{loadbalancer.\+h}}\item 
 loadbalancer.\+cpp\end{DoxyCompactItemize}

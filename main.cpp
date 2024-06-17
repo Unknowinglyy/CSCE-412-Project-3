@@ -1,3 +1,8 @@
+/**
+ * @file main.cpp
+ * @brief This file contains the main function for the load balancer simulation.
+ */
+
 #include <iostream>
 #include <queue>
 #include <string>
@@ -8,6 +13,7 @@
 #include "request.h"
 #include "webserver.h"
 #include "loadbalancer.h"
+
 
 using namespace std;
 

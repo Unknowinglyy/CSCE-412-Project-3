@@ -1,12 +1,25 @@
+/**
+ * @file loadbalancer.cpp
+ * @brief This file contains the implementation of the loadbalancer class.
+ */
+
 #include <iostream>
 #include "loadbalancer.h"
 #include "request.h"
 
+/**
+ * @brief Constructor for the load balancer.
+ * @param servers Vector of pointers to webserver objects.
+ * @param q Queue of request objects.
+ */
 loadbalancer::loadbalancer(std::vector<webserver*>& servers, std::queue<request>& q){
     webServers = servers;
     requestQueue = q;
 }
 
+/**
+ * @brief Distributes requests to the web servers when they are first created. Only lets 50 requests into each server. Also makes sure that the request queue is not empty before distributing requests.
+ */
 void loadbalancer::distributeRequests(){
     //load the requests into the web servers
     for(auto& server: webServers){
@@ -20,6 +33,9 @@ void loadbalancer::distributeRequests(){
     }
 }
 
+/**
+ * @brief Checks for any empty servers and removes them. Does this through the use of an iterator. If any server is found to be empty, it is deleted and removed from the vector. The function continues this check for all servers in the vector.
+ */
 void loadbalancer::checkAndRemove(){
     //check if any of the servers are empty
     for(auto iterator = webServers.begin(); iterator != webServers.end();){
@@ -38,6 +54,11 @@ void loadbalancer::checkAndRemove(){
     }
 }
 
+/**
+ * @brief Checks if all servers are full and adds a new server if they are.
+ *
+ * This function iterates through all the servers in the webServers vector. If it finds a server that is not full (i.e., its queue size is less than 50), it sets the 'full' flag to false and breaks out of the loop. If it doesn't find any such server, the 'full' flag remains true, and a new server is added to the webServers vector.
+ */
 void loadbalancer::checkAndAdd(){
     //check if all the servers are full
     bool full = false;

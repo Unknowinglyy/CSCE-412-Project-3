@@ -103,19 +103,101 @@ $(function(){initNavTree('classwebserver.html',''); initResizable(true); });
   <div class="headertitle"><div class="title">webserver Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class representing a web server.  
+ <a href="#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="webserver_8h_source.html">webserver.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ad35041a6c56860d376518f6b9e267078" id="r_ad35041a6c56860d376518f6b9e267078"><td class="memItemLeft" align="right" valign="top"><a id="ad35041a6c56860d376518f6b9e267078" name="ad35041a6c56860d376518f6b9e267078"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>processRequest</b> ()</td></tr>
+<tr class="memitem:ad35041a6c56860d376518f6b9e267078" id="r_ad35041a6c56860d376518f6b9e267078"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad35041a6c56860d376518f6b9e267078">processRequest</a> ()</td></tr>
+<tr class="memdesc:ad35041a6c56860d376518f6b9e267078"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes a request from the web server's personal queue.  <br /></td></tr>
 <tr class="separator:ad35041a6c56860d376518f6b9e267078"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac414573c759f82742f9643c3c5b309f5" id="r_ac414573c759f82742f9643c3c5b309f5"><td class="memItemLeft" align="right" valign="top"><a id="ac414573c759f82742f9643c3c5b309f5" name="ac414573c759f82742f9643c3c5b309f5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>loadRequest</b> (<a class="el" href="classrequest.html">request</a> r)</td></tr>
+<tr class="memitem:ac414573c759f82742f9643c3c5b309f5" id="r_ac414573c759f82742f9643c3c5b309f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac414573c759f82742f9643c3c5b309f5">loadRequest</a> (<a class="el" href="classrequest.html">request</a> r)</td></tr>
+<tr class="memdesc:ac414573c759f82742f9643c3c5b309f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads a request into the web server's personal queue.  <br /></td></tr>
 <tr class="separator:ac414573c759f82742f9643c3c5b309f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8866c90b1cd880ed233b32792d3a4ce5" id="r_a8866c90b1cd880ed233b32792d3a4ce5"><td class="memItemLeft" align="right" valign="top"><a id="a8866c90b1cd880ed233b32792d3a4ce5" name="a8866c90b1cd880ed233b32792d3a4ce5"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getQueueSize</b> ()</td></tr>
+<tr class="memitem:a8866c90b1cd880ed233b32792d3a4ce5" id="r_a8866c90b1cd880ed233b32792d3a4ce5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8866c90b1cd880ed233b32792d3a4ce5">getQueueSize</a> ()</td></tr>
+<tr class="memdesc:a8866c90b1cd880ed233b32792d3a4ce5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter for the queue size.  <br /></td></tr>
 <tr class="separator:a8866c90b1cd880ed233b32792d3a4ce5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class representing a web server. </p>
+<p>This class is responsible for processing and loading requests, and getting the size of the personal queue of requests. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a8866c90b1cd880ed233b32792d3a4ce5" name="a8866c90b1cd880ed233b32792d3a4ce5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8866c90b1cd880ed233b32792d3a4ce5">&#9670;&#160;</a></span>getQueueSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int webserver::getQueueSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Getter for the queue size. </p>
+<dl class="section return"><dt>Returns</dt><dd>The size of the personal queue. </dd></dl>
+
+</div>
+</div>
+<a id="ac414573c759f82742f9643c3c5b309f5" name="ac414573c759f82742f9643c3c5b309f5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac414573c759f82742f9643c3c5b309f5">&#9670;&#160;</a></span>loadRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void webserver::loadRequest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrequest.html">request</a></td>          <td class="paramname"><span class="paramname"><em>r</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Loads a request into the web server's personal queue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>The request to be loaded. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad35041a6c56860d376518f6b9e267078" name="ad35041a6c56860d376518f6b9e267078"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad35041a6c56860d376518f6b9e267078">&#9670;&#160;</a></span>processRequest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void webserver::processRequest </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Processes a request from the web server's personal queue. </p>
+<p>This function pops the request from the queue and simulates processing time. </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li><a class="el" href="webserver_8h_source.html">webserver.h</a></li>
 <li><b>webserver.cpp</b></li>

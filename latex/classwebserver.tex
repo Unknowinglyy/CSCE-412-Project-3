@@ -1,20 +1,72 @@
 \doxysection{webserver Class Reference}
 \hypertarget{classwebserver}{}\label{classwebserver}\index{webserver@{webserver}}
+
+
+Class representing a web server.  
+
+
+
+
+{\ttfamily \#include $<$webserver.\+h$>$}
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{classwebserver_ad35041a6c56860d376518f6b9e267078}\label{classwebserver_ad35041a6c56860d376518f6b9e267078} 
-void {\bfseries process\+Request} ()
-\item 
-\Hypertarget{classwebserver_ac414573c759f82742f9643c3c5b309f5}\label{classwebserver_ac414573c759f82742f9643c3c5b309f5} 
-void {\bfseries load\+Request} (\mbox{\hyperlink{classrequest}{request}} r)
-\item 
-\Hypertarget{classwebserver_a8866c90b1cd880ed233b32792d3a4ce5}\label{classwebserver_a8866c90b1cd880ed233b32792d3a4ce5} 
-int {\bfseries get\+Queue\+Size} ()
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{classwebserver_ad35041a6c56860d376518f6b9e267078}{process\+Request}} ()
+\begin{DoxyCompactList}\small\item\em Processes a request from the web server\textquotesingle{}s personal queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classwebserver_ac414573c759f82742f9643c3c5b309f5}{load\+Request}} (\mbox{\hyperlink{classrequest}{request}} r)
+\begin{DoxyCompactList}\small\item\em Loads a request into the web server\textquotesingle{}s personal queue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classwebserver_a8866c90b1cd880ed233b32792d3a4ce5}{get\+Queue\+Size}} ()
+\begin{DoxyCompactList}\small\item\em Getter for the queue size. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Class representing a web server. 
+
+This class is responsible for processing and loading requests, and getting the size of the personal queue of requests. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classwebserver_a8866c90b1cd880ed233b32792d3a4ce5}\index{webserver@{webserver}!getQueueSize@{getQueueSize}}
+\index{getQueueSize@{getQueueSize}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{getQueueSize()}{getQueueSize()}}
+{\footnotesize\ttfamily \label{classwebserver_a8866c90b1cd880ed233b32792d3a4ce5} 
+int webserver\+::get\+Queue\+Size (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Getter for the queue size. 
+
+\begin{DoxyReturn}{Returns}
+The size of the personal queue. 
+\end{DoxyReturn}
+\Hypertarget{classwebserver_ac414573c759f82742f9643c3c5b309f5}\index{webserver@{webserver}!loadRequest@{loadRequest}}
+\index{loadRequest@{loadRequest}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{loadRequest()}{loadRequest()}}
+{\footnotesize\ttfamily \label{classwebserver_ac414573c759f82742f9643c3c5b309f5} 
+void webserver\+::load\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classrequest}{request}}}]{r}{}\end{DoxyParamCaption})}
+
+
+
+Loads a request into the web server\textquotesingle{}s personal queue. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & The request to be loaded. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classwebserver_ad35041a6c56860d376518f6b9e267078}\index{webserver@{webserver}!processRequest@{processRequest}}
+\index{processRequest@{processRequest}!webserver@{webserver}}
+\doxysubsubsection{\texorpdfstring{processRequest()}{processRequest()}}
+{\footnotesize\ttfamily \label{classwebserver_ad35041a6c56860d376518f6b9e267078} 
+void webserver\+::process\+Request (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Processes a request from the web server\textquotesingle{}s personal queue. 
+
+This function pops the request from the queue and simulates processing time. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-webserver.\+h\item 
+\mbox{\hyperlink{webserver_8h}{webserver.\+h}}\item 
 webserver.\+cpp\end{DoxyCompactItemize}
